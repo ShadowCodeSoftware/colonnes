@@ -1,56 +1,117 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <!-- <title>Responsive Navbar with Searchbox</title> -->
-      <!-- <link rel="stylesheet" href="style.css"> -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <link rel="stylesheet" href="styleGestion.css">
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-   </head>
-   <body>
-      <nav>
-         <ul>
-            <li class="logo">Gestion des emprunts</li>
-            <li class="btn"><span class="fas fa-bars"></span></li>
-            <div class="items">
-               <li><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
-               <li><a href="effectuer_emprunt.html">Effectuer un emprunts</a></li>
-               <li><a href="#">Supprimer un emprunts</a></li>
-               <li><a href="#">Historique</a></li>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des emprunts</title>
+    <link rel="stylesheet" href="styleGestion.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+</head>
+<body>
+
+    <!-- mettons ici l'entete de notre site  -->
+    <header>
+        <!-- pour avoir le contener invisible qui nous permet de centrer nos sections -->
+        <div class="container">
+            <div class="wrapper">
+                <h1>GESTION DES EMPRUNTS<span class="orange">.</span></h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#main-image">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="effectuer_emprunt.html">Ajouter un emprunt</a>
+                        </li>
+                        <li>
+                            <a href="#">Historique</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-      </nav>
-      <div class="content">
-         <p class="p">emprunts Effectuer</p>
-         <div class="container">
-            <table class="table p">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">nom</th>
-                    <th scope="col">Auteur</th>
-                    <th scope="col">Annee</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row">1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  
-                </tbody>
-              </table>
+        </div>
+    </header>
+    
+    <!-- la premiere section de notre decelopement ou on trouve la premiere image de notre page web -->
+    <section id="main-image">
+        <div class="container">
+            <div class="wrapper">
+               <h2>Nos emprunts<br> <strong>Emprunter c'est se motiver a la lecture</strong></h2> 
+                <a href="effectuer_emprunt.html" class="button-1">EMPRUNT</a>
+            </div>
          </div>
-      </div>
-      <script>
-         $('nav ul li.btn span').click(function(){
-           $('nav ul div.items').toggleClass("show");
-           $('nav ul li.btn span').toggleClass("show");
-         });
-      </script>
-   </body>
+        
+    </section>
+
+    <!-- la troisieme section maintenant qui est celle des possibilites -->
+    <section id="possibility">
+        <div class="container">
+            <div class="wrapper">
+                <div class="row">
+                  <div class="col-lg-4">
+                     <div class="card">
+                        <div class="card-header">
+                           <img src="photo/book-solid.svg" alt="" srcset="" height="300px" >
+                        </div>
+                        <div class="card-body">
+                           <label for="">Nom :</label><br>
+                           <label for="">Date d'emprunt :</label><br>
+                           <label for="">Date de depot :</label><br>
+                           <button class="btn-primary" style="width: 100px; font-size:18px;">Modifier</button>
+                           <button class="btn-danger" style="width: 130px; font-size:18px;">Supprimer</button>
+                        </div>
+                     </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="card">
+                           <div class="card-header">
+                              <img src="photo/book-solid.svg" alt="" srcset="" height="300px">
+                           </div>
+                           <div class="card-body">
+                              <label for="">Nom :</label><br>
+                              <label for="">Date d'emprunt :</label><br>
+                              <label for="">Date de depot :</label><br>
+                              <button class="btn-primary" style="width: 100px; font-size:18px;">Modifier</button>
+                              <button class="btn-danger" style="width: 130px; font-size:18px;">Supprimer</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="card">
+                           <div class="card-header">
+                              <img src="photo/book-solid.svg" alt="" srcset="" height="300px">
+                           </div>
+                           <div class="card-body">
+                              <label for="">Nom :</label><br>
+                              <label for="">Date d'emprunt :</label><br>
+                              <label for="">Date de depot :</label><br>
+                              <button class="btn-primary" style="width: 100px; font-size:18px;">Modifier</button>
+                              <button class="btn-danger" style="width: 130px; font-size:18px;">Supprimer</button>
+                           </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- pour finir ici nous avons la setion contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="wrapper">
+                <h3>contactez nous</h3>
+                <form action="">
+                    <label for="nom">Nom</label>
+                    <input type="text" autofocus id="nom" placeholder="Votre nom">
+                    
+                    <label for="email">Email</label>
+                    <input type="text" autofocus id="email" placeholder="example@gmail.com">
+
+                    <input type="submit" value="OK" class="button-3">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
 </html>
