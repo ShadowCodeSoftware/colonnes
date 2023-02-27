@@ -46,7 +46,14 @@ h3{
 .wrapper{
     right: 940px;
     margin: 0 auto;
+    background: #ececec;
+    padding: 0 20px 0 20px;
+}
+.wrapper1{
+    right: 940px;
+    margin: 0 auto;
     padding: 0 10px;
+    color: #ddd;
 }
 
 .orange{
@@ -66,6 +73,7 @@ small{
 
 header{
     height: 120px;
+    background: #a8a6a6;
 }
 
 header h1{
