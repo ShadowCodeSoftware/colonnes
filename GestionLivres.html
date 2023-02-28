@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
 <head>
     <title>Gestion des Livres</title>
     
     <!-- Meta -->
-    <meta charset="utf-8">
+    <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
+	<link rel="stylesheet"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
     
     <!-- FontAwesome JS-->
     <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
@@ -150,36 +153,37 @@
 					<div class="modal-dialog">
 						<div class="modal-content">
 							<div class="modal-header">
-							<h1 class="modal-title fs-5" id="exampleModalLabel">Ajoute un livre</h1>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								<h1 class="modal-title fs-5" id="exampleModalLabel">Ajoute un livre</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 							</div>
 							<div class="modal-body">
-								<form action="livre.html" class="form-group">
+								<form action="#" class="form-group" th:action="@{/createBook}" th:object="${book}"
+								method="POST">
 									<div class="row">
 										<div class="col-md-6 py-3">
 											<label for="">Nom du livre</label>
-											<input type="text" class="form-control" name="title">
+											<input type="text" class="form-control" th:field="*{title}">
 										</div>
 										<div class="col-md-6 py-3">
 											<label for="">Genre</label>
-											<input type="text" class="form-control" name="genre">
+											<input type="text" class="form-control" th:field="*{genre}">
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-md-6 py-3">
 											<label for="">Nom de l'auteur</label>
-											<input type="text" class="form-control" name="author">
+											<input type="text" class="form-control" th:field="*{author}">
 										</div>
 										
 									</div>
-									
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+										<button type="submit" class="btn btn-primary">Enregistrer</button>
+									</div>
 									
 								</form>
 							</div>
-							<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-							<button type="button" class="btn btn-primary">Enregistrer</button>
-							</div>
+
 						</div>
 					</div>
 				</div>				
