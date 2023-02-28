@@ -15,6 +15,5 @@ public class UserService {
     public User createUser(User user) {
         User userToSave = new User(user.getEmail(), user.getName(), user.getPhoneNumber());
         return userRepository.save(userToSave);
-
     }
 }
