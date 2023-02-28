@@ -76,7 +76,7 @@ public class UserController {
                         * RECUPERER L'UTILISATEUR AYANT   * 
                         *           POUR MAIL 'mail'      *
                         **********************************/ 
-
+ 
     @GetMapping("/users/{mail}")
     public ResponseEntity<User> geUserById(@PathVariable("mail") String mail) {
       Optional<User> userData = userRepository.findByEmail(mail);
