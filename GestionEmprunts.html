@@ -186,8 +186,8 @@
 															<form action="emprunt.html" class="form-group">
 																<div class="row">
 																	<div class="col-md-6 py-3">
-																		<label for="">Etudiant</label>
-																		<select class="form-control" name="" id="">
+																		<label for="">email</label>
+																		<select class="form-control" th:field="*{userEmail}" id="">
 																			<option value="">
 																				....
 																			</option>
@@ -195,7 +195,7 @@
 																	</div>
 																	<div class="col-md-6 py-3">
 																		<label for="">Nom du livre</label>
-																		<select class="form-control" name="" id="">
+																		<select class="form-control" th:field="*{bookid}" id="">
 																			<option value="">
 																				....
 																			</option>
